@@ -2,7 +2,7 @@ function countLetters(string) {
   // this has to be a function
   const stringLowerCase = string.toLowerCase().replace(/[^a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF]+/g);;
   const counts = {};
-
+  console.log("*******************************Letters Count*******************************")
   const len = stringLowerCase.length;
   const umlats = [];
   // Loop through the string...
