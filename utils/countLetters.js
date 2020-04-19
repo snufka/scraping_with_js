@@ -1,5 +1,4 @@
 function countLetters(string) {
-  // this has to be a function
   const stringLowerCase = string.toLowerCase().replace(/[^a-z\u00C0-\u00D6\u00D8-\u00F6\u00F8-\u00FF]+/g);;
   const counts = {};
   console.log("*******************************Letters Count*******************************")
@@ -8,17 +7,14 @@ function countLetters(string) {
   // Loop through the string...
   for (let index = 0; index < len; ++index) {
     // Get this character
-    const ch = stringLowerCase.charAt(index); // Not all engines support [] on strings
+    const ch = stringLowerCase.charAt(index);
     if (ch === "ä" || ch === "ü" || ch === "ß" || ch === "ö") {
       umlats.push(ch);
     }
 
-    // Get the count for it, if we have one; we'll get `undefined` if we
-    // don't know this character yet
     count = counts[ch];
 
-    // If we have one, store that count plus one; if not, store one         // We can rely on `count` being falsey if we haven't seen it before,
-    // because we never store falsey numbers in the `counts` object.
+   
     counts[ch] = count ? count + 1 : 1;
   }
   for (ch in counts) {
