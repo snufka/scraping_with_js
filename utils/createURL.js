@@ -6,7 +6,6 @@ function createURL(url) {
 
     const split = userinput.split(".");
 
-    // Define the URLS we will be scrapin-- this is user input-- need to add logic for what happens if the user enter url without https
 
     // Checking Language by subDomain;
 
