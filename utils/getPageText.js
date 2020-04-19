@@ -11,12 +11,7 @@ function getPageText(pageUrl) {
         const title = $("#firstHeading").html();
         console.log("************* " + title + " *************");
 
-        // iterate over and extract text
-        /*$("body").each((index, element) => {
-            let newText = $(element).text();
-            mytext = { ...mytext, newText };
-    
-        });*/
+      
 
         //Nevigation leftsidebar
         let leftSideBar = "";
@@ -25,8 +20,7 @@ function getPageText(pageUrl) {
         });
         console.log("**Left side**" + "\n" + leftSideBar);
 
-        //NEEDS WORK!!!!
-        //righ table class name="infobox vcard" +"vertical-navbox" table -- also need to get rid of all the empty lines
+        
         let rightSideBar = "";
         $("tr").each((index, element) => {
             rightSideBar = $(element).children("th").text();
@@ -34,10 +28,7 @@ function getPageText(pageUrl) {
         });
         console.log("right side bar" + "\n" + rightSideBar);
 
-        /*const ulms = $('li', 'ul').text();
-        console.log(ulms);*/
-
-        //main text -- needs to be chronologicly organised!!!!
+      
         let mainText = "";
 
         $(".mw-parser-output").each((index, element) => {
@@ -54,13 +45,7 @@ function getPageText(pageUrl) {
         const tableOfContent = $(".toclevel-1").children("a").text();
         console.log("table of content: " + tableOfContent);
 
-        /* let tableOfConten = "";
-       $(".toclevel-1").each((index, element) => {
-         tableOfConten = $(element).children("a").text();
-         
-       });
-       console.log("*****tableOfConten:*******" + tableOfConten);*/
-
+       
         //all the text of the page
 
         let allTheText = "";
