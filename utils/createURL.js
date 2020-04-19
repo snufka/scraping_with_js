@@ -23,9 +23,9 @@ function createURL(url) {
     let finalUrl;
 
     if (split[0].includes("http://")) {
-        finalUrl = "http://" + userinput;
-    } else {
         finalUrl = userinput;
+    } else {
+        finalUrl = "http://" + userinput;
     }
 
     return finalUrl;
