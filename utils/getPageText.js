@@ -11,7 +11,7 @@ function getPageText(pageUrl) {
         const title = $("#firstHeading").html();
         console.log("************* " + title + " *************");
 
-      
+
 
         //Nevigation leftsidebar
         let leftSideBar = "";
@@ -20,15 +20,19 @@ function getPageText(pageUrl) {
         });
         console.log("**Left side**" + "\n" + leftSideBar);
 
-        
-        let rightSideBar = "";
-        $("tr").each((index, element) => {
-            rightSideBar = $(element).children("th").text();
-            //
-        });
-        console.log("right side bar" + "\n" + rightSideBar);
 
-      
+        let rightSideBar = "";
+        $("body > table > tbody > tr > td").each((index, element) => {
+            const td = $(element).text();
+            const span = $(element).children("span").text();
+            const a = $(element).children("a").text();
+            rightSideBar = td + span + a;
+
+        });
+        console.log("***********right side*****************" + "\n" + rightSideBar)
+
+
+
         let mainText = "";
 
         $(".mw-parser-output").each((index, element) => {
@@ -37,6 +41,7 @@ function getPageText(pageUrl) {
             let ul = $(element).children("ul").text();
             mainText = mainText + "\n" + headertwo + "\n" + p + "\n" + ul;
         });
+
         console.log(
             "*****************Main Text*******************" + "\n" + mainText
         );
@@ -45,7 +50,7 @@ function getPageText(pageUrl) {
         const tableOfContent = $(".toclevel-1").children("a").text();
         console.log("table of content: " + tableOfContent);
 
-       
+
         //all the text of the page
 
         let allTheText = "";
