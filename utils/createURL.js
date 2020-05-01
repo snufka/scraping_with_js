@@ -24,17 +24,21 @@ function createURL(url) {
 
     if (split[0].includes("https://")) {
         finalUrl = userinput;
+
+        //logic for http:// url entry 
+    } else if (split[0].includes("http://")) {
+        var a = split[0];
+        var newHttp = a.split(":");
+        newHttp[0] = "https";
+        a = newHttp[0] + newHttp[1];
+        finalUrl = userinput;
+        console.log(finalUrl);
     }
-    //logic for http:// url entry 
-    /*} else if (split[0].includes("http://")) {
-        let newHttp=split[0].split(":");
-        newhttp[0]="https";
-        finalUrl = "https://" + userinput;
-        console.log(finalUrl);*/
     else {
         finalUrl = "https://" + userinput;
 
-        return finalUrl;
+
     };
+    return finalUrl;
 }
 module.exports = createURL
