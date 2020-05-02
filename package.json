@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon app.js"
+    "test": "jest --coverage"
   },
   "keywords": [],
   "author": "",
@@ -19,5 +19,8 @@
     "puppeteer": "^3.0.0",
     "request": "^2.88.2",
     "request-promise": "^4.2.5"
+  },
+  "devDependencies": {
+    "jest": "^25.5.4"
   }
 }
