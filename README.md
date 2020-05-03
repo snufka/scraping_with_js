@@ -8,3 +8,6 @@ $ node app.js.
 You will be asked to provide a URL. so please enter it in the console and click enter.
 if you'd like to run a new URL query repeat the command 
 $ node app.js.
+
+
+To run the tests use npm test command 
